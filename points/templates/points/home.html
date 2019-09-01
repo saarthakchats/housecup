@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style media="screen">
+      h1{
+        font-family: "Courier New", Courier;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+      }
+      display-4{
+        margin-bottom: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align=center class="display-4">The Race to the JPIS House Cup</h1>
+    <hr class="my-4">
+    <div class="container">
+      <h1 class="display-5" id="countdown" align=center></h1>
+    </div>
+
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2020 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("countdown").innerHTML = days + " days " + hours + " hours "
+      + minutes + " mins " + seconds + " secs ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "The next cup is coming!";
+      }
+    }, 1000);
+    </script>
+  </body>
+</html>
