@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,24 +6,173 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style media="screen">
-      h1{
+
+      body{
+        background: #fff;
+        transition: .8s all;
+      }
+      .changeColor{
+        background: #C70039;;
+      }
+      .changeColors{
+        background: #ffd54f;;
+      }
+      .changeColorsy{
+        background: #04529C;;
+      }
+      .changeColorgy{
+        background: #049B1B;;
+      }
+      .heads{
         font-family: "Courier New", Courier;
         padding-top: 5vh;
-        padding-bottom: 5vh;
+        font-size: 4.5vw;
       }
       display-4{
         margin-bottom: 1px;
       }
+      .housebox{
+        width: 100%;
+        height: 400px;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .container {
+        color: #333;
+        text-align: center;
+}
+
+
+h1 {
+font-weight: normal;
+}
+
+li {
+display: inline-block;
+font-size: 1.5em;
+list-style-type: none;
+padding: 1em;
+text-transform: uppercase;
+}
+
+li span {
+display: block;
+font-size: 4.5rem;
+}
+.timerbox{
+   margin-top: 15%;
+   margin-bottom: 20%;
+   font-size: 2vw;
+}
+
     </style>
   </head>
   <body>
-    <h1 align=center class="display-4">The Race to the JPIS House Cup</h1>
-    <hr class="my-4">
-    <div class="container">
-      <h1 class="display-5" id="countdown" align=center></h1>
-    </div>
 
-    <script>
+      <div align=center>
+<div class="slide" data-background = "#ffd54f">
+  <div class="inside timerbox">
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+    <br>
+    <h1 class="display-4">to the JPIS House Cup</h1>
+  </div>
+</div>
+      </div>
+    </div>
+    <br><br>
+    <div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <h1 style="color: white;" align=center class="display-4">Red Bulls</h1>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 style="color: white;" align=center class="display-4">Yellow Stags</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 style="color: white;" align=center class="display-4">Blue Wolves</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 style="color: white;" align=center class="display-4">Green Eagles</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function() {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 550) {
+         $("body").addClass("changeColor")
+      }
+      if ($(this).scrollTop() < 550) {
+         $("body").removeClass("changeColor")
+      }
+   });
+});
+$(function() {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 1150) {
+         $("body").addClass("changeColors")
+      }
+      if ($(this).scrollTop() < 1150) {
+         $("body").removeClass("changeColors")
+      }
+   });
+});
+$(function() {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 1900) {
+         $("body").addClass("changeColorsy")
+      }
+      if ($(this).scrollTop() < 1900) {
+         $("body").removeClass("changeColorsy")
+      }
+   });
+});
+$(function() {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 2600) {
+         $("body").addClass("changeColorgy")
+      }
+      if ($(this).scrollTop() < 2600) {
+         $("body").removeClass("changeColorgy")
+      }
+   });
+});
+</script>
+
+<script type="text/javascript">
+const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+let countDown = new Date('Jan 05, 2020 00:00:00').getTime(),
+  x = setInterval(function() {
+
+    let now = new Date().getTime(),
+        distance = countDown - now;
+
+    document.getElementById('days').innerText = Math.floor(distance / (day)),
+      document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+      document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+      document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+    //do something later when date is reached
+    //if (distance < 0) {
+    //  clearInterval(x);
+    //  'IT'S MY BIRTHDAY!;
+    //}
+
+  }, second)
+
+</script>
+    <!-- <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Jan 5, 2020 00:00:00").getTime();
 
@@ -51,6 +201,6 @@
         document.getElementById("countdown").innerHTML = "The next cup is coming!";
       }
     }, 1000);
-    </script>
+    </script> -->
   </body>
 </html>
