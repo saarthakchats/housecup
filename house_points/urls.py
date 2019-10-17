@@ -6,4 +6,5 @@ from django.conf import settings
 urlpatterns = [
     path('', points.views.home, name='home'),
     path('admin/', admin.site.urls),
+    path('update/', points.views.update, name='update'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -13,4 +13,4 @@ class House(models.Model):
 		return self.name
 
 	def mascot_name(self):
-		return f"{self.name} {self.mascot}".title() 
+		return f"{self.name} {self.mascot}".title()
