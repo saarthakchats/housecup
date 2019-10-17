@@ -66,7 +66,7 @@
 			font-size: 4.5rem;
 		}
 		.timerbox{
-			margin-top: 15%;
+			margin-top: 10%;
 			font-size: 2vw;
 		}
 		.housebox{
@@ -134,7 +134,7 @@
 					<h1 class="display-4">to the JPIS House Cup</h1>
 				</div>
 			</div>
-			<i class="fa fa-sort-down scrollDown" id="click0"></i>
+			<i class="fa fa-4x fa-angle-down scrollDown" id="click0"></i>
 		</div>
 	</div>
 	<br><br>
@@ -150,7 +150,7 @@
 		<h3 style="color: white;" align=center>lead with</h3>
 		<br>
 		<h1 style="color: white;" align=center class="display-2">{{ first.points }} points</h1>
-		<i class="fa fa-sort-down scrollDown houseScroll" id="click1"></i>
+		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click1"></i>
 	</div>
 	<div class="housebox" id="house2">
 		<h1 style="color: white;" align=center class="display-3">The {{ second.mascot }}</h1>
@@ -158,7 +158,7 @@
 		<h3 style="color: white;" align=center>are right behind, with</h3>
 		<br>
 		<h1 style="color: white;" align=center class="display-2">{{ second.points }} points</h1>
-		<i class="fa fa-sort-down scrollDown houseScroll" id="click2"></i>
+		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click2"></i>
 	</div>
 	<div class="housebox" id="house3">
 		<h1 style="color: white;" align=center class="display-3">The {{ third.mascot }}</h1>
@@ -166,7 +166,7 @@
 		<h3 style="color: white;" align=center>are coming in third with</h3>
 		<br>
 		<h1 style="color: white;" align=center class="display-2">{{ third.points }} points</h1>
-		<i class="fa fa-sort-down scrollDown houseScroll" id="click3"></i>
+		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click3"></i>
 	</div>
 	<div class="housebox" id="house4">
 		<h1 style="color: white;" align=center class="display-3">The {{ fourth.mascot }}</h1>
@@ -220,10 +220,10 @@
 	});
 	$(function() {
 		$(window).scroll(function () {
-				if ($(this).scrollTop() > ($("#house1").offset().top - 900)) {
+				if ($(this).scrollTop() > ($("#house1").offset().top - 600)) {
 					$("body").addClass("changeColor")
 				}
-				if ($(this).scrollTop() < ($("#house1").offset().top - 900)) {
+				if ($(this).scrollTop() < ($("#house1").offset().top - 600)) {
 					$("body").removeClass("changeColor")
 				}
 		});
