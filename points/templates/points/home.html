@@ -15,7 +15,6 @@
 			color:inherit;
 			text-decoration: none;
 		}
-
 		a:hover {
 			color: #e4e4e4;
 			text-decoration: none;
@@ -135,55 +134,55 @@
 				-o-transition: 0.5s;
 		}
 		.myButt {
-outline: none;
-border: none;
-padding: 20px;
-display: block;
-margin: 50px auto;
-cursor: pointer;
-font-size: 20px;
-background-color: transparent;
-position: relative;
-border: 2px solid #fff;
-transition: all 0.5s ease;
--webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
--ms-transition: all 0.5s ease;
-}
-.three {
-color: #fff;
-border-color: transparent;
-}
-.three:before, .three:after {
-width: 0;
-height: 3px;
-content: " ";
-background-color: #f8f8f8;
-position: absolute;
-top: 0;
-left: 50%;
-transition: all 0.3s ease;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
--ms-transition: all 0.3s ease;
-}
-.three:after {
-top: 100%;
-}
-.three:hover {
-letter-spacing: 8px;
-color: #F44336;
-}
-.three:hover:before, .three:hover:after {
-width: 100%;
-left: 0;
-}
-.three:hover:after {
-width: 100%;
-left: 0;
-}
+		outline: none;
+		border: none;
+		padding: 20px;
+		display: block;
+		margin: 50px auto;
+		cursor: pointer;
+		font-size: 20px;
+		background-color: transparent;
+		position: relative;
+		border: 2px solid #fff;
+		transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		}
+		.three {
+		color: #fff;
+		border-color: transparent;
+		}
+		.three:before, .three:after {
+		width: 0;
+		height: 3px;
+		content: " ";
+		background-color: #f8f8f8;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		}
+		.three:after {
+		top: 100%;
+		}
+		.three:hover {
+		letter-spacing: 8px;
+		color: #F44336;
+		}
+		.three:hover:before, .three:hover:after {
+		width: 100%;
+		left: 0;
+		}
+		.three:hover:after {
+		width: 100%;
+		left: 0;
+		}
 		</style>
 	</head>
 	<body>
@@ -211,147 +210,147 @@ left: 0;
 	</div>
 	<!-- <br><br><br><br><br><br><br><br> -->
 	<div class="housebox" id="house1">
-			<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' first.mascot %}">The {{ first.mascot }}</a></h1>
-</button>
-					<br>
+		<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' first.mascot %}">The {{ first.mascot }}</a></h1>
+		</button>
+		<br>
 		<h3 style="color: white;" align=center>lead with</h3>
 		<br>
-	 <h1 style="color: white;" align=center class="display-2">{{ first.points }} points</h1>
-	 <h5><a href="{% url 'housepage' first.mascot %}" class="small">View score breakdown<a/></h5>
-		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click1"></i>
-	</div>
-	<div class="housebox" id="house2">
-		<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' second.mascot %}">The {{ second.mascot }}</a></h1>
-		</button>
-		<br>
-		<h3 style="color: white;" align=center>are right behind, with</h3>
-		<br>
-		<h1 style="color: white;" align=center class="display-2">{{ second.points }} points</h1>
-		<h5><a href="{% url 'housepage' second.mascot %}" class="small">View score breakdown<a/></h5>
-		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click2"></i>
-	</div>
-	<div class="housebox" id="house3">
-		<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' third.mascot %}">The {{ third.mascot }}</a></h1>
-		</button>
-		<br>
-		<h3 style="color: white;" align=center>are coming in third with</h3>
-		<br>
-		<h1 style="color: white;" align=center class="display-2">{{ third.points }} points</h1>
-		<h5><a href="{% url 'housepage' third.mascot %}" class="small">View score breakdown<a/></h5>
-		<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click3"></i>
-	</div>
-	<div class="housebox" id="house4">
-		<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' fourth.mascot %}">The {{ fourth.mascot }}</a></h1>
-		</button>
-		<br>
-		<h3 style="color: white;" align=center>are trailing, with</h3>
-		<br>
-		<h1 style="color: white;" align=center class="display-2 houseScroll">{{ fourth.points }} points</h1>
-		<h5><a href="{% url 'housepage' fourth.mascot %}" class="small">View score breakdown<a/></h5>
-	</div>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript">
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 50 ) {
-			$('.scrolltop:hidden').stop(true, true).fadeIn();
-		} else {
-			$('.scrolltop').stop(true, true).fadeOut();
-		}
-	});
-	$(function(){$(".scroll").click(function(){
-		$("html,body").animate({
-			scrollTop:($("body").offset().top - 100)
-		},"1000");
-		return false})
-	})
-	$(document).ready(function (){
-		$("#click1").click(function (){
-			$('html, body').animate({
-				scrollTop: $("#house2").offset().top - 200
-			}, 1000);
-		});
-	});
-	$(document).ready(function (){
-		$("#click2").click(function (){
-			$('html, body').animate({
-				scrollTop: $("#house3").offset().top - 200
-			}, 1000);
-		});
-	});
-	$(document).ready(function (){
-		$("#click3").click(function (){
-			$('html, body').animate({
-				scrollTop: $("#house4").offset().top - 200
-			}, 1000);
-		});
-	});
-	$(document).ready(function (){
-		$("#click0").click(function (){
-			$('html, body').animate({
-				scrollTop: $("#house1").offset().top - 200
-			}, 1000);
-		});
-	});
-	$(function() {
-		$(window).scroll(function () {
-				if ($(this).scrollTop() > ($("#house1").offset().top - 600)) {
-					$("body").addClass("changeColor")
-				}
-				if ($(this).scrollTop() < ($("#house1").offset().top - 600)) {
-					$("body").removeClass("changeColor")
-				}
-		});
-	});
-	$(function() {
-		$(window).scroll(function () {
-				if ($(this).scrollTop() > ($("#house2").offset().top - 500)) {
-					$("body").addClass("changeColors")
-				}
-				if ($(this).scrollTop() < ($("#house2").offset().top - 500)) {
-					$("body").removeClass("changeColors")
-				}
-		});
-	});
-	$(function() {
-		$(window).scroll(function () {
-				if ($(this).scrollTop() > ($("#house3").offset().top - 500)) {
-					$("body").addClass("changeColorsy")
-				}
-				if ($(this).scrollTop() < ($("#house3").offset().top - 500)) {
-					$("body").removeClass("changeColorsy")
-				}
-		});
-	});
-	$(function() {
-		$(window).scroll(function () {
-				if ($(this).scrollTop() > ($("#house4").offset().top - 400)) {
-					$("body").addClass("changeColorgy")
-				}
-				if ($(this).scrollTop() < ($("#house4").offset().top - 400)) {
-					$("body").removeClass("changeColorgy")
-				}
-		});
-	});
-	</script>
-	<script type="text/javascript">
-	const second = 1000,
-			minute = second * 60,
-			hour = minute * 60,
-			day = hour * 24;
-	let countDown = new Date('Jan 05, 2020 00:00:00').getTime(),
-		x = setInterval(function() {
-			let now = new Date().getTime(),
-					distance = countDown - now;
-			document.getElementById('days').innerText = Math.floor(distance / (day)),
-				document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-				document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-				document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-			//do something later when date is reached
-			//if (distance < 0) {
-			//  clearInterval(x);
-			//  'IT'S MY BIRTHDAY!;
-			//}
-		}, second)
-	</script>
-</body>
-</html>
+		<h1 style="color: white;" align=center class="display-2">{{ first.points }} points</h1>
+		<h5><a href="{% url 'housepage' first.mascot %}" class="small">View score breakdown<a/></h5>
+			<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click1"></i>
+		</div>
+		<div class="housebox" id="house2">
+			<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' second.mascot %}">The {{ second.mascot }}</a></h1>
+			</button>
+			<br>
+			<h3 style="color: white;" align=center>are right behind, with</h3>
+			<br>
+			<h1 style="color: white;" align=center class="display-2">{{ second.points }} points</h1>
+			<h5><a href="{% url 'housepage' second.mascot %}" class="small">View score breakdown<a/></h5>
+				<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click2"></i>
+			</div>
+			<div class="housebox" id="house3">
+				<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' third.mascot %}">The {{ third.mascot }}</a></h1>
+				</button>
+				<br>
+				<h3 style="color: white;" align=center>are coming in third with</h3>
+				<br>
+				<h1 style="color: white;" align=center class="display-2">{{ third.points }} points</h1>
+				<h5><a href="{% url 'housepage' third.mascot %}" class="small">View score breakdown<a/></h5>
+					<i class="fa fa-4x fa-angle-down scrollDown houseScroll" id="click3"></i>
+				</div>
+				<div class="housebox" id="house4">
+					<button class="myButt three"><h1 style="color: white;" align=center class="display-3"><a href="{% url 'housepage' fourth.mascot %}">The {{ fourth.mascot }}</a></h1>
+					</button>
+					<br>
+					<h3 style="color: white;" align=center>are trailing, with</h3>
+					<br>
+					<h1 style="color: white;" align=center class="display-2 houseScroll">{{ fourth.points }} points</h1>
+					<h5><a href="{% url 'housepage' fourth.mascot %}" class="small">View score breakdown<a/></h5>
+					</div>
+					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+					<script type="text/javascript">
+					$(window).scroll(function() {
+						if ($(this).scrollTop() > 100 ) {
+							$('.scrolltop:hidden').stop(true, true).fadeIn();
+						} else {
+							$('.scrolltop').stop(true, true).fadeOut();
+						}
+					});
+					$(function(){$(".scroll").click(function(){
+						$("html,body").animate({
+							scrollTop:($("body").offset().top - 200)
+						},1000);
+						return false})
+					})
+					$(document).ready(function (){
+						$("#click1").click(function (){
+							$('html, body').animate({
+								scrollTop: $("#house2").offset().top - 100
+							}, 1000);
+						});
+					});
+					$(document).ready(function (){
+						$("#click2").click(function (){
+							$('html, body').animate({
+								scrollTop: $("#house3").offset().top - 100
+							}, 1000);
+						});
+					});
+					$(document).ready(function (){
+						$("#click3").click(function (){
+							$('html, body').animate({
+								scrollTop: $("#house4").offset().top - 100
+							}, 1000);
+						});
+					});
+					$(document).ready(function (){
+						$("#click0").click(function (){
+							$('html, body').animate({
+								scrollTop: $("#house1").offset().top - 100
+							}, 1000);
+						});
+					});
+					$(function() {
+						$(window).scroll(function () {
+								if ($(this).scrollTop() > ($("#house1").offset().top - 600)) {
+									$("body").addClass("changeColor")
+								}
+								if ($(this).scrollTop() < ($("#house1").offset().top - 600)) {
+									$("body").removeClass("changeColor")
+								}
+						});
+					});
+					$(function() {
+						$(window).scroll(function () {
+								if ($(this).scrollTop() > ($("#house2").offset().top - 500)) {
+									$("body").addClass("changeColors")
+								}
+								if ($(this).scrollTop() < ($("#house2").offset().top - 500)) {
+									$("body").removeClass("changeColors")
+								}
+						});
+					});
+					$(function() {
+						$(window).scroll(function () {
+								if ($(this).scrollTop() > ($("#house3").offset().top - 500)) {
+									$("body").addClass("changeColorsy")
+								}
+								if ($(this).scrollTop() < ($("#house3").offset().top - 500)) {
+									$("body").removeClass("changeColorsy")
+								}
+						});
+					});
+					$(function() {
+						$(window).scroll(function () {
+								if ($(this).scrollTop() > ($("#house4").offset().top - 400)) {
+									$("body").addClass("changeColorgy")
+								}
+								if ($(this).scrollTop() < ($("#house4").offset().top - 400)) {
+									$("body").removeClass("changeColorgy")
+								}
+						});
+					});
+					</script>
+					<script type="text/javascript">
+					const second = 1000,
+							minute = second * 60,
+							hour = minute * 60,
+							day = hour * 24;
+					let countDown = new Date('Jan 05, 2020 00:00:00').getTime(),
+						x = setInterval(function() {
+							let now = new Date().getTime(),
+									distance = countDown - now;
+							document.getElementById('days').innerText = Math.floor(distance / (day)),
+								document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+								document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+								document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+							//do something later when date is reached
+							//if (distance < 0) {
+							//  clearInterval(x);
+							//  'IT'S MY BIRTHDAY!;
+							//}
+						}, second)
+					</script>
+				</body>
+			</html>
