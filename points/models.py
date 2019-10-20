@@ -6,6 +6,12 @@ class House(models.Model):
 	name = models.CharField(max_length=6)
 	colour = models.CharField(max_length=6, validators=[MinLengthValidator(6)])
 	points = models.PositiveSmallIntegerField()
+	motto = models.TextField()
+	sports = models.PositiveSmallIntegerField(default=0)
+	academics = models.PositiveSmallIntegerField(default=0)
+	competitions = models.PositiveSmallIntegerField(default=0)
+	achievements = models.PositiveSmallIntegerField(default=0)
+	misc = models.PositiveSmallIntegerField(default=0)
 	mascot = models.CharField(max_length=6)
 	mascot_image = models.ImageField(upload_to='houses/mascots/')
 

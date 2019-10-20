@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import House
 
 # Create your views here.
@@ -8,3 +8,7 @@ def home(request):
 
 def update(request):
 	return render(request, 'points/update.html')
+
+def housepage(request, house_name):
+	house = get_object_or_404(House, mascot=house_name)
+	return render(request, 'points/housepage.html', {'house': house})
