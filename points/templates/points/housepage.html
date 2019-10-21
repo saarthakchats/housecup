@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ house.mascot }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ house.mascot }}</title>
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style media="screen">
-      h1 {
-        font-family: 'Titillium Web', sans-serif;
-
-      }
-
-    </style>
-  </head>
-  <body>
-
-    <h1 align=center class="display-4 pt-4">{{ house.motto }}</h1>
-
-  </body>
+	</head>
+	<body>
+		<h1 align=center class="display-4 pt-4">{{ house.motto }}</h1>
+		<canvas id="myChart"></canvas>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script type="text/javascript">
+			var ctx = document.getElementById('myChart').getContext('2d');
+			var myDoughnutChart = new Chart(ctx, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [{{house.sports}}, {{house.academics}}, {{house.competitions}}, {{house.achievements}}, {{house.misc}}],
+						backgroundColor: ['#04045c', '#7c0062', '#c60052', '#f35835', '#ffa600']
+					}],
+					// These labels appear in the legend and in the tooltips when hovering different arcs
+					labels: [
+						'Sports',
+						'Academics',
+						'Competitions',
+						'Achievements',
+						'Miscellaneous'
+					]
+				},
+				options: {
+					title: {
+						display: true,
+						text: '{{ house.name }} House',
+						fontStyle: 'bold',
+						fontSize: 28,
+						// fontColor: '#{{house.colour}}',
+					},
+					animation: {
+						duration: 2500,
+						easing: 'easeInQuart'
+					},
+					legend: {
+						display: true,
+						position: 'bottom',
+						labels: {
+							padding: 10
+						}
+					}
+				}
+			});
+		</script>
+	</body>
 </html>
