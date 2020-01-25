@@ -12,7 +12,7 @@ class House(models.Model):
 	competitions = models.PositiveSmallIntegerField(default=0)
 	achievements = models.PositiveSmallIntegerField(default=0)
 	misc = models.PositiveSmallIntegerField(default=0)
-	mascot = models.CharField(max_length=6)
+	mascot = models.CharField(max_length=8)
 	mascot_image = models.ImageField(upload_to='houses/mascots/')
 
 	def __str__(self):

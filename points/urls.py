@@ -7,4 +7,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('<slug:house_name>', points.views.housepage, name='housepage'),
+    path('update/', points.views.update, name = "update"),
 ]
