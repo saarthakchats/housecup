@@ -20,7 +20,7 @@ def update(request):
 			elif request.POST['category'] == 'achievements':
 				house.achievements += int(request.POST['points'])
 			elif request.POST['category'] == 'miscellaneous':
-				house.miscellaneous += int(request.POST['points'])
+				house.misc += int(request.POST['points'])
 			elif request.POST['category'] == 'competitions':
 				house.competitions += int(request.POST['points'])
 			house.save()
